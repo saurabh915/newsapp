@@ -1,0 +1,5 @@
+ 
+ 
+ when we want the values of these props from another file ...
+  let {title,description,imageUrl,url,author,date,source}=this.props;
+  this all items are accessed by newsItem from news component

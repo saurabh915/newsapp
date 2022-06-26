@@ -1,0 +1,45 @@
+ this is most important component in this app
+ 
+
+ this is how default props are assigned \
+   static defaultProps = {
+    country: "in",
+    pageSize: 8,
+    category: "general",
+  };
+
+
+  and this how proptypes are assigned
+
+   static propTypes = {
+    country: PropTypes.string,
+    pageSize: PropTypes.number,
+    category: PropTypes.string,
+    named: PropTypes.string,
+    apikey:PropTypes.string
+  };
+
+NOTE THAT STATES ARE DIFFERNET AND PROPS ARE DIFFERNET
+states pass value to paremt component
+and props are send by parent component
+
+in this news app state is passed as props
+example
+
+this.props.setProgress(20);
+
+
+
+here infinite scroll  also used
+
+    <InfiniteScroll
+          dataLength={this.state.articles.length}
+          next={this.fetchMoreData}
+          hasMore={this.state.articles.length !== this.state.totalResults}
+          loader={<Spinner/>}
+
+
+        >
+
+
+        infinite scroll and api integretion is most crucial part of this app

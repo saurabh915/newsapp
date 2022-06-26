@@ -1,0 +1,32 @@
+it is base of news app
+it is totally class based component which do not give as best performance as given by function based component
+
+
+first to hide api key here .env.local file is used
+
+here loading bar is used which show how much data is loaded till now;
+
+hence as it is not function based component we can not use hooks to store state hence state is stored as
+.......      state =    {
+                            progress:0
+                        }
+             setProgress=(progress)=>{
+                                           this.setState({
+                                           progress:progress
+                                              })
+                                      }
+here are some values needed by loadingbar
+       <LoadingBar
+        color='#f11946'
+        progress={this.state.progress}
+         />
+         
+         //here progress is zero till now 
+
+        if we want to change the progress then pass 
+        setProgress=  {this.setProgress} in the component
+     
+in fist time we initialize progrss as  this.state.progress  and if we want to change the state then we use this.props.setProgress(10);
+
+this is one important point used in app.js
+A “key” is a special string attribute you need to include when creating lists of elements in React. Keys are used to React to identify which items in the list are changed, updated, or deleted. In other words, we can say that keys are used to give an identity to the elements in the lists
